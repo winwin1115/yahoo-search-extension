@@ -1,0 +1,31 @@
+{
+    "name": "Yahoo検索",
+    "description": "Search to Yahoo Shop.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["index.js", "jquery.min.js"]
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "alarms",
+        "downloads"
+    ],
+    "browser_action": {
+		"default_icon": "icons/icon_128.png"
+	},
+    "icons": {
+        "16": "icons/icon_16.png",
+        "32": "icons/icon_32.png",
+        "48": "icons/icon_48.png",
+        "128": "icons/icon_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["jquery.min.js"],
+            "run_at": "document_end"
+        }
+    ]
+}

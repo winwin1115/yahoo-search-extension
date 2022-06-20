@@ -1,0 +1,132 @@
+<html class="js-focus-visible" data-js-focus-visible="">
+  	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="colorlib.com">
+
+		<link href="../assets/css/main.css" rel="stylesheet">
+		<link href="../assets/css/style.css" rel="stylesheet">
+		<link href="../assets/css/swal.css" rel="stylesheet">
+		<link href="../assets/css/font-awesome.css" rel="stylesheet">
+		<!-- <link href="../assets/css/bootstrap4.1.3.min.css"rel="stylesheet" > -->
+		<meta name="robots" content="noindex, follow">
+		
+	</head>
+	<body>
+		<div class="log_div">
+			<a href="seller-manage.html" class="seller-btn">セラーID管理</a>
+			<a class="log-btn">ログアウト</a>
+		</div>
+		<div class="s010">
+			<form>
+				<div class="inner-form">
+					<div class="basic-search">
+						<div class="input-field">
+							<input id="search" type="text" placeholder="キーワードを入力">
+							<div class="icon-wrap">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="advance-search">
+						<div class="row" style="padding-left: 15px; padding-right: 15px;">
+							<div class="progress border col-md-12">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+						<h3 style="margin-top: 10px;">検索設定</h3>
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<label class="desc">取得件数</label>
+								<input type="number" class="" id="count_id" value="50" />
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<label class="desc">取得順</label>
+								<select class="chosen-select-no-single" id="order_id">
+									<option value="5">おすすめ順</option>
+									<option value="4" selected>売れている順</option>
+									<option value="99">新着順</option>
+									<option value="2">安い順</option>
+									<option value="3">高い順</option>
+									<option value="8">レビュー件数の多い順</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-sm-12 seller_div">
+								
+							</div>
+						</div>
+						<div class="row second">
+							<div class="col-md-6 col-sm-6">
+								<label class="desc">販売価格の下限</label>
+								<input type="number" class="" id="min_price" value="1" />
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<label class="desc">販売価格の上限</label>
+								<input type="number" class="" id="max_price" value="99999" />
+							</div>
+							<!-- <div class="col-md-6 col-sm-6">
+								<label class="desc">CSV出力先</label>
+								<input type="text" class="" id="save_path" placeholder="CSVファイルを保存するパスを入力してください。"/>
+							</div> -->
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<label class="desc">除外キーワード</label>
+								<input type="text" class="" id="black_word" />
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<label class="desc">出力項目</label>
+								<select class="chosen-select-no-single" data-placeholder="出力項目を選択してください。" multiple id="property_id">
+									<option value="all" selected>すべて</option>
+									<option value="asin">ASIN</option>
+									<option value="aname">商品名(Amazon)</option>
+									<option value="aprice">販売価格(Amazon)</option>
+									<option value="jan">JANコード</option>
+									<option value="name">商品名</option>
+									<option value="price">販売価格</option>
+									<option value="seller_id">セラーID</option>
+									<option value="price_diff">価格差</option>
+								</select>
+							</div>
+						</div>
+						<div class="row third">
+							<div class="input-field">
+								<div class="result-count">
+									<!-- <span>108 </span>results -->
+								</div>
+								<div class="group-btn" style="padding-right: 15px;">
+									<button class="btn-delete" id="reset-btn">既定値に戻す</button>
+									<button class="btn-search"><i class="fa fa-download" style="margin-right: 5px;"></i>CSV生成</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/bootstrap-notify.min.js"></script>
+		<script src="../assets/js/papaparse.min.js"></script>
+		<script src="../assets/js/encoding.min.js"></script>
+		<script src="../assets/js/csv.js"></script>
+		
+		<script src="../assets/js/custom.js"></script>
+		<script src="../assets/js/jquery.superfish.js"></script>
+		<script src="../assets/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="../assets/js/jquery.themepunch.showbizpro.min.js"></script>
+		<script src="../assets/js/jquery.flexslider-min.js"></script>
+		<script src="../assets/js/chosen.jquery.min.js"></script>
+		<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+		<script src="../assets/js/jquery.counterup.min.js"></script>
+		<script src="../assets/js/jquery.jpanelmenu.js"></script>
+		<script src="../assets/js/stacktable.js"></script>
+		<script src="../assets/js/slick.min.js"></script>
+
+		<script src="../assets/js/bootstrap4.1.3.min.js"></script>
+	</body>
+</html>

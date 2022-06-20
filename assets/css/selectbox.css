@@ -1,0 +1,58 @@
+#container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+}
+
+label,
+select {
+    display: block;
+    margin: 5px 0;
+}
+
+select {
+    width: 100%;
+    font-size: 1em;
+    padding: 5px;
+}
+
+button {
+    box-sizing: border-box;
+    width: 100%;
+    background: #2c6dd5;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+}
+
+#name {
+    margin-bottom: 5px;
+}
+#btnAdd {
+    margin-bottom: 15px;
+}
+
+form input[type="text"] {
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font-size: 1em;
+}
+
+form input[type="text"]:focus {
+    box-shadow: 0 0 5px #f0db4f;
+    padding: 3%;
+    border: 1px solid #f0db4f;
+}

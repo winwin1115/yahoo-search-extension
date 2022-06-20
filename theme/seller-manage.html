@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="colorlib.com">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/swal.css" rel="stylesheet">
+    <link href="../assets/css/selectbox.css" rel="stylesheet">
+    <meta name="robots" content="noindex, follow">
+</head>
+<body>
+    <div class="log_div">
+        <a href="index.html" class="seller-btn">ホーム</a>
+        <a class="log-btn">ログアウト</a>
+    </div>
+    <div class="s010">
+        <div id="container">
+            <form>
+                <label for="name">セラーID:</label>
+                <input type="text" class="input-text" id="name" placeholder="セラーIDを入力" autocomplete="off">
+    
+                <button id="btnAdd">追 加</button>
+    
+                <label for="list">セラーIDのリスト:</label>
+                <select id="list" name="list" multiple>
+    
+                </select>
+                <button id="btnRemove">選択したセラーIDを削除</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap-notify.min.js"></script>
+    <script src="../assets/js/seller-manage.js"></script>
+</body>
+</html>
